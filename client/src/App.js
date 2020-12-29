@@ -2,7 +2,9 @@
 import React, { Fragment, useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
+import PrivateRoute from './components/routing/PrivateRoute';
 import Alert from './components/layout/alert';
+import Dashboard from './components/dashboard/Dashboard';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import setAuthToken from './utils/setAuthToken';
@@ -38,6 +40,7 @@ const App = () => {
           <Switch>
             <Route exact path="/register" component={Register}></Route>
             <Route exact path="/login" component={Login}></Route>
+            <PrivateRoute expact path="/dashboard" component={Dashboard}></PrivateRoute>
           </Switch>
         </section>
       </Fragment>
